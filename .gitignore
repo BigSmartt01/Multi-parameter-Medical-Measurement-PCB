@@ -1,0 +1,132 @@
+# ── Arduino IDE ───────────────────────────────────────────────────────────────
+# Build output (regenerated on every compile)
+build/
+**/.ino.esp32.esp32.esp32dev/
+**/.ino.esp32*/
+**/build-esp32*/
+
+# Arduino cache
+.arduino15/
+**/.cache/
+
+# VS Code Arduino extension artifacts
+.vscode/
+*.code-workspace
+
+# Compiled object files and binaries
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+
+# Upload artifacts
+*.esptool*
+
+
+# ── KiCad ─────────────────────────────────────────────────────────────────────
+# KiCad auto-generated backup and lock files
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
+**/*-backups/
+**/kicad_project_backups/
+fp-info-cache
+*.000
+*.lck
+
+# KiCad auto-save
+_autosave-*
+*.kicad_prl
+
+# KiCad simulation output
+*.cir
+*.log
+
+# KiCad 3D cache (regenerated from 3D model libraries)
+**/.cache/
+
+
+# ── Fabrication outputs ────────────────────────────────────────────────────────
+# Gerbers and drill files are intentionally KEPT (track in hardware/fabrication/)
+# If you want to exclude them, uncomment the lines below:
+# hardware/fabrication/
+
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+*.egg
+venv/
+.env
+
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+
+# ── Windows ───────────────────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+
+# ── Linux ─────────────────────────────────────────────────────────────────────
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ── Editors ───────────────────────────────────────────────────────────────────
+# JetBrains (CLion, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+\#*\#
+.\#*
+
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+# Compressed archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Log files
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
