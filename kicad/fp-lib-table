@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "footprints") (type "KiCad") (uri "C:/Users/INNOV8HUB230625/Documents/Projects/Multi-parameter_Medical_Measurement/libraries/footprints") (options "") (descr ""))
+)
