@@ -1,0 +1,46 @@
+<svg width="680" height="480" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>System architecture</title>
+<desc>Block diagram showing the ESP32 patient-side unit and Raspberry Pi 5 nurse-side unit connected over WiFi and MQTT. The ESP32 side contains sensors, actuators, and local I/O. The Raspberry Pi side contains the ML model, data storage, and display/app.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#3d3d3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<rect width="680" height="480" fill="#ffffff"/>
+
+<rect x="40" y="40" width="600" height="170" rx="20" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="60" y="72" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#04342C">ESP32 — patient side</text>
+<text x="60" y="90" font-family="Arial, sans-serif" font-size="12" fill="#0F6E56">Sensors, actuators, local I/O</text>
+
+<rect x="60" y="100" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="143" y="136" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">Sensors</text>
+<text x="143" y="158" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">ECG, SpO2, temp, BP</text>
+
+<rect x="246" y="100" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="329" y="136" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">Actuators</text>
+<text x="329" y="158" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">Pump, solenoid</text>
+
+<rect x="432" y="100" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="515" y="136" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">Local I/O</text>
+<text x="515" y="158" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">OLED, buzzer</text>
+
+<line x1="340" y1="210" x2="340" y2="270" stroke="#3d3d3a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="360" y="244" font-family="Arial, sans-serif" font-size="12" fill="#444441" dominant-baseline="central">WiFi / MQTT</text>
+
+<rect x="40" y="270" width="600" height="170" rx="20" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="60" y="302" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#26215C">Raspberry Pi 5 — nurse side</text>
+<text x="60" y="320" font-family="Arial, sans-serif" font-size="12" fill="#534AB7">ML, storage, display, app</text>
+
+<rect x="60" y="330" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="143" y="366" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">ML model</text>
+<text x="143" y="388" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">Arrhythmia detection</text>
+
+<rect x="246" y="330" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="329" y="366" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">Data storage</text>
+<text x="329" y="388" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">Real-time logging</text>
+
+<rect x="432" y="330" width="166" height="90" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="515" y="366" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2C2C2A" text-anchor="middle">Display + app</text>
+<text x="515" y="388" font-family="Arial, sans-serif" font-size="12" fill="#444441" text-anchor="middle">HDMI, web app</text>
+</svg>
