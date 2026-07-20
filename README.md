@@ -21,6 +21,9 @@ The Raspberry Pi 5 sits on the nurse side, runs the ML model (arrhythmia detecti
 \[Patient side]                              \[Nurse side]
 ESP32 (sensors + actuators + OLED + buzzer)  <--MQTT/WiFi-->  Raspberry Pi 5 (ML, logic, storage, HDMI, web app)
 ```
+<p align="center">
+    <img src="docs/images/system_architecture_block_diagram.svg" width="700">
+</p>
 
 MQTT topic structure (for reference, implemented in firmware):
 
@@ -71,19 +74,27 @@ Multi-parameter Medical Measurement/
 
 Full pin mapping and design rationale are in [`docs/circuit\_documentation.md`](docs/circuit_documentation.md).
 
+<p align="center">
+  <img src="docs/images/board_top.png" width="550"><br>
+  <em>Fabricated single-layer patient-side monitoring board</em>
+</p>
+
+## Power architecture
+
+<p align="center">
+  <img src="docs/images/power_architecture_block_diagram.svg" width="600">
+</p>
+
+<p align="center">
+  <em>3x 18650 (3S) + BMS -> LM2596 buck -> 5V rail</em>
+</p>
+
 ## Getting started
 
 1. Open `kicad/Multi-parameter Medicals.kicad\_pro` in KiCad 9.0.7 or later.
 2. Custom symbols and footprints for breakout modules (AD8232, MAX30102, LM2596 module, BMS module) live under `libraries/`, make sure these are added to your project's library table before opening the schematic, or KiCad will show missing symbol/footprint errors.
 3. The board is single-layer, routed with net ties and jumper wires (JP1-JP6, NT1-NT3) to work around single-layer constraints. If you're re-routing, keep the ground pour intact between the analog sensor section (left side) and the motor/switching section (right side), see the documentation for why.
 4. Before sending to fab, run a full DRC pass and verify trace widths on the high-current nets (battery/BMS input, pump, solenoid) against actual component current ratings.
-
-## Status / open items
-
-* Block diagram (electrical + system-level): pending.
-* Buzzer part number/current rating: confirm against datasheet once sourced (NPN driver stage is already in place regardless).
-* Trace width verification on 12V/high-current nets: pending final pump/solenoid datasheet check.
-* Mounting hole placement: confirm before final fab.
 
 ## Team
 
